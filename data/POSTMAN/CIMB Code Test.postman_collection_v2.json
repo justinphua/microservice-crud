@@ -1,0 +1,397 @@
+{
+	"info": {
+		"_postman_id": "fd661d99-182f-4e5d-954b-6538d9a1eba8",
+		"name": "CIMB Code Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Customer Profile",
+			"item": [
+				{
+					"name": "New Customer",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"firstName\" : \"Dummy\",\n\t\"lastName\": \"Dummy\",\n\t\"email\": \"Dummy@gmail.com\",\n\t\"phoneNumber\": \"+60121234567\",\n\t\"mailingAddress1\": \"Level 28\",\n\t\"mailingAddress2\": \"Menara Dummy\"\n}"
+						},
+						"url": {
+							"raw": "http://service-mock.hopto.org:9080/customer",
+							"protocol": "http",
+							"host": [
+								"service-mock",
+								"hopto",
+								"org"
+							],
+							"port": "9080",
+							"path": [
+								"customer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Customer",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://service-mock.hopto.org:9080/customer",
+							"protocol": "http",
+							"host": [
+								"service-mock",
+								"hopto",
+								"org"
+							],
+							"port": "9080",
+							"path": [
+								"customer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Customer By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://service-mock.hopto.org:9080/customer/3",
+							"protocol": "http",
+							"host": [
+								"service-mock",
+								"hopto",
+								"org"
+							],
+							"port": "9080",
+							"path": [
+								"customer",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Customer",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://service-mock.hopto.org:9080/customer/5",
+							"protocol": "http",
+							"host": [
+								"service-mock",
+								"hopto",
+								"org"
+							],
+							"port": "9080",
+							"path": [
+								"customer",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Patch Customer",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"firstName\" : \"Justin1111\"\n}"
+						},
+						"url": {
+							"raw": "http://service-mock.hopto.org:9080/customer/4",
+							"protocol": "http",
+							"host": [
+								"service-mock",
+								"hopto",
+								"org"
+							],
+							"port": "9080",
+							"path": [
+								"customer",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Put Customer",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"firstName\" : \"Justin\",\n\t\"lastName\": \"Phua\",\n\t\"email\": \"justinphua85@gmail.com\",\n\t\"phoneNumber\": \"+60123456789\",\n\t\"mailingAddress1\": \"Level 11\",\n\t\"mailingAddress2\": \"Menara CIMB\"\n}"
+						},
+						"url": {
+							"raw": "http://service-mock.hopto.org:9080/customer/4",
+							"protocol": "http",
+							"host": [
+								"service-mock",
+								"hopto",
+								"org"
+							],
+							"port": "9080",
+							"path": [
+								"customer",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Bank Account",
+			"item": [
+				{
+					"name": "Get Bank Account",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://service-mock.hopto.org:9080/customer/3/bankAccount",
+							"protocol": "http",
+							"host": [
+								"service-mock",
+								"hopto",
+								"org"
+							],
+							"port": "9080",
+							"path": [
+								"customer",
+								"3",
+								"bankAccount"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Bank Account",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"accountNumber\": \"704-66666\",\n\t\"accountBalance\": 1\n}"
+						},
+						"url": {
+							"raw": "http://service-mock.hopto.org:9080/customer/4/bankAccount",
+							"protocol": "http",
+							"host": [
+								"service-mock",
+								"hopto",
+								"org"
+							],
+							"port": "9080",
+							"path": [
+								"customer",
+								"4",
+								"bankAccount"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Put Bank Account",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"accountNumber\": \"704-11111111\",\n\t\"accountBalance\": 37382.12\n}"
+						},
+						"url": {
+							"raw": "http://service-mock.hopto.org:9080/customer/3/bankAccount/1",
+							"protocol": "http",
+							"host": [
+								"service-mock",
+								"hopto",
+								"org"
+							],
+							"port": "9080",
+							"path": [
+								"customer",
+								"3",
+								"bankAccount",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Patch Bank Account",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"accountBalance\": 19281.11\n}"
+						},
+						"url": {
+							"raw": "http://service-mock.hopto.org:9080/customer/3/bankAccount/1",
+							"protocol": "http",
+							"host": [
+								"service-mock",
+								"hopto",
+								"org"
+							],
+							"port": "9080",
+							"path": [
+								"customer",
+								"3",
+								"bankAccount",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Bank Account",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://service-mock.hopto.org:9080/customer/4/bankAccount/5",
+							"protocol": "http",
+							"host": [
+								"service-mock",
+								"hopto",
+								"org"
+							],
+							"port": "9080",
+							"path": [
+								"customer",
+								"4",
+								"bankAccount",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Account Services",
+			"item": [
+				{
+					"name": "All Account Balance",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://service-mock.hopto.org:9081/accountBalance",
+							"protocol": "http",
+							"host": [
+								"service-mock",
+								"hopto",
+								"org"
+							],
+							"port": "9081",
+							"path": [
+								"accountBalance"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
